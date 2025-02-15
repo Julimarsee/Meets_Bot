@@ -1,6 +1,10 @@
 from os import getenv
 from pymongo import MongoClient
-import json
+
+import logging
+
+from utils import INTERESTS_JSON
+from utils.filework import parse_json_file
 
 class Database:
     def __init__(self):
@@ -8,13 +12,8 @@ class Database:
         self.db = self.client[getenv('db_name')]
         self.interests = self.load_interests()
 
-    def load_interests(self):
-        try:
-            with open('interests.json', 'r', encoding='utf-8') as file:
-                return json.load(file)
-        except Exception as e:
-            print(f"Ошибка при загрузке списка интересов: {e}")
-            return []
+    def load_interests(self) -> list[str]:
+        return parse_json_file(INTERESTS_JSON, [])
 
     def save_user_name(self, chat_id: int, name: str):
         try:
@@ -25,11 +24,10 @@ class Database:
             )
             return True
         except Exception as e:
-            print(f"Ошибка при сохранении имени пользователя: {e}")
+            logging.error(f"Ошибка при сохранении имени пользователя: {e}")
             return False
 
     def save_user_age(self, chat_id: int, age: int):
-
         try:
             self.db.users.update_one(
                 {'chat_id': chat_id},
@@ -38,11 +36,10 @@ class Database:
             )
             return True
         except Exception as e:
-            print(f"Ошибка при сохранении возраста пользователя: {e}")
+            logging.error(f"Ошибка при сохранении возраста пользователя: {e}")
             return False
 
     def save_user_phone(self, chat_id: int, phone: str):
-
         try:
             self.db.users.update_one(
                 {'chat_id': chat_id},
@@ -51,11 +48,10 @@ class Database:
             )
             return True
         except Exception as e:
-            print(f"Ошибка при сохранении номера телефона: {e}")
+            logging.error(f"Ошибка при сохранении номера телефона: {e}")
             return False
 
     def save_user_location(self, chat_id: int, location: dict):
-
         try:
             self.db.users.update_one(
                 {'chat_id': chat_id},
@@ -64,11 +60,10 @@ class Database:
             )
             return True
         except Exception as e:
-            print(f"Ошибка при сохранении местоположения: {e}")
+            logging.error(f"Ошибка при сохранении местоположения: {e}")
             return False
 
     def save_user_gender(self, chat_id: int, gender: str):
-
         try:
             self.db.users.update_one(
                 {'chat_id': chat_id},
@@ -77,11 +72,10 @@ class Database:
             )
             return True
         except Exception as e:
-            print(f"Ошибка при сохранении пола пользователя: {e}")
+            logging.error(f"Ошибка при сохранении пола пользователя: {e}")
             return False
 
     def save_user_interests(self, chat_id: int, interests: list):
-
         try:
             self.db.users.update_one(
                 {'chat_id': chat_id},
@@ -90,7 +84,7 @@ class Database:
             )
             return True
         except Exception as e:
-            print(f"Ошибка при сохранении интересов пользователя: {e}")
+            logging.error(f"Ошибка при сохранении интересов пользователя: {e}")
             return False
         
     def delete_user(self, chat_id: int):
@@ -98,7 +92,7 @@ class Database:
             result = self.db.users.delete_one({'chat_id': chat_id})
             return result.deleted_count > 0
         except Exception as e:
-            print(f"Ошибка при удалении пользователя: {e}")
+            logging.error(f"Ошибка при удалении пользователя: {e}")
             return False
 
     def premium_user(self, chat_id: int):
@@ -110,7 +104,7 @@ class Database:
             )
             return True
         except Exception as e:
-            print(f"Ошибка при активации премиум-статуса: {e}")
+            logging.error(f"Ошибка при активации премиум-статуса: {e}")
             return False
 
     def check_user_exists(self, chat_id: int) -> bool:
@@ -118,5 +112,5 @@ class Database:
             user = self.db.users.find_one({'chat_id': chat_id})
             return user is not None
         except Exception as e:
-            print(f"Ошибка при проверке пользователя: {e}")
+            logging.error(f"Ошибка при проверке пользователя: {e}")
             return False
