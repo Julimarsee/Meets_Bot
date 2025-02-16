@@ -23,10 +23,6 @@ def main():
         print('no token')
         return
     
-    # commands
-
-    login_command = LoginCommand()
-    
     # bot
 
     bot = Bot(TOKEN)
@@ -34,8 +30,8 @@ def main():
     bot.add_commands(
         StartCommand(),
         GoCommand(),
-        login_command,
-        SettingsCommand(login_command)
+        LoginCommand(),
+        SettingsCommand()
     )
 
     bot.start()

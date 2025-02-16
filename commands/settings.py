@@ -8,10 +8,9 @@ from .Command import Command
 from .login import LoginCommand  
 
 class SettingsCommand(Command):
-    def __init__(self, login_command: LoginCommand):
+    def __init__(self):
         super().__init__()
         self.commands = ['settings']
-        self.login_command = login_command
         self.admins: list[str] = parse_json_file(ADMINS_JSON, [])
         self.description = 'Параметры'
 
@@ -28,7 +27,8 @@ class SettingsCommand(Command):
             choice = message.text
 
             if choice == "Изменить анкету":
-                self.login_command.execute_command(message)
+                self.bot.set_state('login')
+                self.bot.update_state(message)
             elif choice == "Жалоба":
                 self.bot.telebot.send_message(chat_id, "Напишите вашу жалобу:")
                 self.bot.telebot.register_next_step_handler(message, self.process_complaint)

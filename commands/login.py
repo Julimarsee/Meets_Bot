@@ -1,3 +1,4 @@
+import logging
 from telebot.types import Message
 from .Command import Command
 
@@ -27,7 +28,7 @@ class LoginCommand(Command):
                 self.bot.telebot.send_message(chat_id, "Ошибка при сохранении имени. Попробуйте снова.")
         except Exception as e:
             self.bot.telebot.reply_to(message, 'Произошла ошибка. Пожалуйста, попробуйте снова.')
-            print(f"Ошибка: {e}")
+            logging.error(f"Ошибка: {e}")
 
     def process_age_step(self, message: Message):
         try:
@@ -42,7 +43,7 @@ class LoginCommand(Command):
                 self.bot.telebot.send_message(chat_id, "Ошибка при сохранении возраста. Попробуйте снова.")
         except Exception as e:
             self.bot.telebot.reply_to(message, 'Произошла ошибка. Пожалуйста, попробуйте снова.')
-            print(f"Ошибка: {e}")
+            logging.error(f"Ошибка: {e}")
 
     def process_phone_step(self, message: Message):
         try:
@@ -57,7 +58,7 @@ class LoginCommand(Command):
                 self.bot.telebot.send_message(chat_id, "Ошибка при сохранении номера телефона. Попробуйте снова.")
         except Exception as e:
             self.bot.telebot.reply_to(message, 'Произошла ошибка. Пожалуйста, попробуйте снова.')
-            print(f"Ошибка: {e}")
+            logging.error(f"Ошибка: {e}")
 
     def process_location_step(self, message: Message):
         try:
@@ -72,7 +73,7 @@ class LoginCommand(Command):
                 self.bot.telebot.send_message(chat_id, "Ошибка при сохранении местоположения. Попробуйте снова.")
         except Exception as e:
             self.bot.telebot.reply_to(message, 'Произошла ошибка. Пожалуйста, попробуйте снова.')
-            print(f"Ошибка: {e}")
+            logging.error(f"Ошибка: {e}")
 
     def process_gender_step(self, message: Message):
         try:
@@ -91,7 +92,7 @@ class LoginCommand(Command):
                 self.bot.telebot.send_message(chat_id, "Пожалуйста, введите 'М' или 'Ж'.")
         except Exception as e:
             self.bot.telebot.reply_to(message, 'Произошла ошибка. Пожалуйста, попробуйте снова.')
-            print(f"Ошибка: {e}")
+            logging.error(f"Ошибка: {e}")
 
     def process_interests_step(self, message: Message):
         try:
@@ -105,4 +106,4 @@ class LoginCommand(Command):
                 self.bot.telebot.send_message(chat_id, "Ошибка при сохранении интересов. Попробуйте снова.")
         except Exception as e:
             self.bot.telebot.reply_to(message, 'Произошла ошибка. Пожалуйста, попробуйте снова.')
-            print(f"Ошибка: {e}")
+            logging.error(f"Ошибка: {e}")

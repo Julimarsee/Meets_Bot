@@ -31,7 +31,7 @@ class Command:
         @self.bot.telebot.message_handler(commands=self.commands)
         def command(message: Message):
             log_receive_message(message.text)
-            self.execute_command(message)
+            self.bot.set_and_update_state(self.name, message)
 
     def execute_command(self, message: Message):
         pass
