@@ -1,0 +1,590 @@
+2025-02-23 10:55:38,572 | INFO | bot @YouMeetsBot is started!
+2025-02-23 10:55:47,582 | INFO | Message is received: /settings
+2025-02-23 10:55:47,583 | INFO | changed state to "settings"
+2025-02-23 10:55:48,457 | INFO | state "settings" is updated
+2025-02-23 10:56:33,461 | INFO | Message is received: /settings
+2025-02-23 10:56:33,461 | INFO | changed state to "settings"
+2025-02-23 10:56:33,985 | INFO | state "settings" is updated
+2025-02-23 10:56:35,545 | INFO | changed state to "login"
+2025-02-23 10:56:35,875 | INFO | state "login" is updated
+2025-02-23 11:15:58,633 | INFO | bot @YouMeetsBot is started!
+2025-02-23 11:16:04,419 | INFO | Message is received: /go
+2025-02-23 11:16:04,419 | INFO | changed state to "go"
+2025-02-23 11:16:04,708 | INFO | state "go" is updated
+2025-02-23 11:16:08,344 | INFO | Message is received: /settings
+2025-02-23 11:16:08,344 | INFO | changed state to "settings"
+2025-02-23 11:16:09,011 | INFO | state "settings" is updated
+2025-02-23 11:16:10,633 | INFO | changed state to "login"
+2025-02-23 11:16:10,853 | INFO | state "login" is updated
+2025-02-23 11:21:20,319 | ERROR | Infinity polling exception: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
+2025-02-23 11:21:20,324 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 logger_level=logger_level, allowed_updates=allowed_updates, restart_on_change=False,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            logger_level=logger_level, allowed_updates=allowed_updates)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 111, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+                               allowed_updates=allowed_updates,
+                               timeout=timeout, long_polling_timeout=long_polling_timeout)
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+        self.token, offset=offset, limit=limit, timeout=timeout, allowed_updates=allowed_updates,
+        long_polling_timeout=long_polling_timeout)
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    result = _get_req_session().request(
+        method, request_url, params=params, files=files,
+        timeout=(connect_timeout, read_timeout), proxies=proxy)
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
+
+2025-02-23 11:27:08,918 | INFO | bot @YouMeetsBot is started!
+2025-02-23 11:27:12,211 | INFO | Message is received: /settings
+2025-02-23 11:27:12,211 | INFO | changed state to "settings"
+2025-02-23 11:27:12,981 | INFO | state "settings" is updated
+2025-02-23 11:27:15,537 | INFO | changed state to "login"
+2025-02-23 11:27:16,309 | INFO | state "login" is updated
+2025-02-23 11:34:04,240 | INFO | bot @YouMeetsBot is started!
+2025-02-23 11:34:09,023 | INFO | Message is received: /settings
+2025-02-23 11:34:09,023 | INFO | changed state to "settings"
+2025-02-23 11:34:09,479 | INFO | state "settings" is updated
+2025-02-23 11:34:11,058 | INFO | changed state to "login"
+2025-02-23 11:34:11,416 | INFO | state "login" is updated
+2025-02-23 11:36:18,511 | INFO | bot @YouMeetsBot is started!
+2025-02-23 11:36:25,106 | INFO | Message is received: /login
+2025-02-23 11:36:25,106 | INFO | changed state to "login"
+2025-02-23 11:36:25,626 | INFO | state "login" is updated
+2025-02-23 11:39:35,198 | INFO | bot @YouMeetsBot is started!
+2025-02-23 11:39:53,461 | INFO | Message is received: /login
+2025-02-23 11:39:53,461 | INFO | changed state to "login"
+2025-02-23 11:39:53,953 | INFO | state "login" is updated
+2025-02-23 11:54:01,312 | INFO | bot @YouMeetsBot is started!
+2025-02-23 11:54:06,507 | INFO | Message is received: /go
+2025-02-23 11:54:06,507 | INFO | changed state to "go"
+2025-02-23 11:54:06,814 | INFO | state "go" is updated
+2025-02-23 11:54:08,291 | INFO | Message is received: /settings
+2025-02-23 11:54:08,292 | INFO | changed state to "settings"
+2025-02-23 11:54:08,624 | INFO | state "settings" is updated
+2025-02-23 11:54:10,096 | INFO | changed state to "login"
+2025-02-23 11:54:10,454 | INFO | state "login" is updated
+2025-02-23 13:42:17,578 | INFO | Message is received: /settings
+2025-02-23 13:42:17,579 | INFO | changed state to "settings"
+2025-02-23 13:42:18,210 | INFO | state "settings" is updated
+2025-02-23 14:01:18,961 | INFO | Message is received: /go
+2025-02-23 14:01:18,962 | INFO | changed state to "go"
+2025-02-23 14:01:20,891 | INFO | state "go" is updated
+2025-02-23 14:01:22,424 | INFO | Message is received: /login
+2025-02-23 14:01:22,424 | INFO | changed state to "login"
+2025-02-23 14:01:22,906 | INFO | state "login" is updated
+2025-02-23 14:03:02,221 | INFO | Message is received: /go
+2025-02-23 14:03:02,222 | INFO | changed state to "go"
+2025-02-23 14:03:02,376 | INFO | state "go" is updated
+2025-02-23 14:03:34,747 | INFO | Message is received: /settings
+2025-02-23 14:03:34,747 | INFO | changed state to "settings"
+2025-02-23 14:03:34,989 | INFO | state "settings" is updated
+2025-02-23 14:03:36,316 | INFO | changed state to "login"
+2025-02-23 14:03:36,578 | INFO | state "login" is updated
+2025-02-23 14:03:39,887 | ERROR | Ошибка: invalid literal for int() with base 10: 'Жалоба'
+2025-02-23 14:03:44,978 | INFO | Message is received: /go
+2025-02-23 14:03:44,978 | INFO | changed state to "go"
+2025-02-23 14:03:45,180 | INFO | state "go" is updated
+2025-02-23 14:03:47,812 | INFO | Message is received: /login
+2025-02-23 14:03:47,812 | INFO | changed state to "login"
+2025-02-23 14:03:48,027 | INFO | state "login" is updated
+2025-02-23 14:03:51,409 | ERROR | Ошибка: invalid literal for int() with base 10: '/settings'
+2025-02-23 14:03:52,639 | INFO | Message is received: /settings
+2025-02-23 14:03:52,639 | INFO | changed state to "settings"
+2025-02-23 14:03:52,944 | INFO | state "settings" is updated
+2025-02-23 14:03:59,490 | INFO | Message is received: /settings
+2025-02-23 14:03:59,490 | INFO | changed state to "settings"
+2025-02-23 14:03:59,582 | INFO | Message is received: /settings
+2025-02-23 14:03:59,583 | INFO | changed state to "settings"
+2025-02-23 14:03:59,743 | INFO | state "settings" is updated
+2025-02-23 14:03:59,788 | INFO | state "settings" is updated
+2025-02-23 14:04:03,880 | INFO | Message is received: /settings
+2025-02-23 14:04:03,881 | INFO | changed state to "settings"
+2025-02-23 14:04:04,193 | INFO | state "settings" is updated
+2025-02-23 14:04:06,840 | INFO | Message is received: /settings
+2025-02-23 14:04:06,840 | INFO | changed state to "settings"
+2025-02-23 14:04:07,067 | INFO | state "settings" is updated
+2025-02-23 14:16:33,557 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:16:40,349 | INFO | Message is received: /login
+2025-02-23 14:16:40,350 | INFO | changed state to "login"
+2025-02-23 14:16:40,354 | ERROR | Infinity polling exception: Database.user_exists() missing 1 required positional argument: 'connection'
+2025-02-23 14:16:40,355 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 logger_level=logger_level, allowed_updates=allowed_updates, restart_on_change=False,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            logger_level=logger_level, allowed_updates=allowed_updates)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\commands\Command.py", line 34, in command
+    self.bot.set_and_update_state(self.name, message)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\classes\Bot.py", line 40, in set_and_update_state
+    self.update_state(message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\classes\Bot.py", line 35, in update_state
+    callback(message)
+    ~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\commands\login.py", line 16, in execute_command
+    if self.db.user_exists(chat_id):
+       ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+TypeError: Database.user_exists() missing 1 required positional argument: 'connection'
+
+2025-02-23 14:17:26,157 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:17:26,381 | INFO | Message is received: /login
+2025-02-23 14:17:26,382 | INFO | changed state to "login"
+2025-02-23 14:17:26,387 | ERROR | Infinity polling exception: 'Database' object has no attribute 'users_collection'
+2025-02-23 14:17:26,390 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 logger_level=logger_level, allowed_updates=allowed_updates, restart_on_change=False,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            logger_level=logger_level, allowed_updates=allowed_updates)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\commands\Command.py", line 34, in command
+    self.bot.set_and_update_state(self.name, message)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\classes\Bot.py", line 40, in set_and_update_state
+    self.update_state(message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\classes\Bot.py", line 35, in update_state
+    callback(message)
+    ~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\commands\login.py", line 16, in execute_command
+    if self.db.user_exists(chat_id):
+       ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\db\database.py", line 16, in user_exists
+    return self.users_collection.find_one({'chat_id': chat_id}) is not None
+           ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Database' object has no attribute 'users_collection'
+
+2025-02-23 14:20:51,070 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:20:53,127 | INFO | Message is received: /login
+2025-02-23 14:20:53,127 | INFO | changed state to "login"
+2025-02-23 14:20:53,508 | INFO | state "login" is updated
+2025-02-23 14:20:58,530 | INFO | Message is received: /settings
+2025-02-23 14:20:58,531 | INFO | changed state to "settings"
+2025-02-23 14:20:59,314 | INFO | state "settings" is updated
+2025-02-23 14:21:01,245 | INFO | changed state to "login"
+2025-02-23 14:21:01,347 | INFO | state "login" is updated
+2025-02-23 14:30:10,233 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:30:16,144 | INFO | Message is received: /login
+2025-02-23 14:30:16,145 | INFO | changed state to "login"
+2025-02-23 14:30:16,903 | INFO | state "login" is updated
+2025-02-23 14:30:19,077 | INFO | Message is received: /settings
+2025-02-23 14:30:19,078 | INFO | changed state to "settings"
+2025-02-23 14:30:19,530 | INFO | state "settings" is updated
+2025-02-23 14:30:22,365 | ERROR | Ошибка: LoginCommand.process_name_step() missing 1 required positional argument: 'message'
+2025-02-23 14:31:04,359 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:31:06,652 | INFO | Message is received: /settings
+2025-02-23 14:31:06,652 | INFO | changed state to "settings"
+2025-02-23 14:31:07,602 | INFO | state "settings" is updated
+2025-02-23 14:31:12,757 | ERROR | Ошибка: 'NoneType' object has no attribute 'telebot'
+2025-02-23 14:32:10,234 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:32:15,815 | INFO | Message is received: /settings
+2025-02-23 14:32:15,815 | INFO | changed state to "settings"
+2025-02-23 14:32:16,435 | INFO | state "settings" is updated
+2025-02-23 14:32:17,647 | ERROR | Ошибка: LoginCommand.process_name_step() takes 2 positional arguments but 3 were given
+2025-02-23 14:35:53,583 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:35:56,600 | INFO | Message is received: /settings
+2025-02-23 14:35:56,601 | INFO | changed state to "settings"
+2025-02-23 14:35:57,279 | INFO | state "settings" is updated
+2025-02-23 14:35:58,820 | ERROR | Ошибка: SettingsCommand.execute_command() got an unexpected keyword argument 'skip_existence_check'
+2025-02-23 14:38:06,442 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:38:09,956 | INFO | Message is received: /settings
+2025-02-23 14:38:09,956 | INFO | changed state to "settings"
+2025-02-23 14:38:11,765 | INFO | state "settings" is updated
+2025-02-23 14:38:30,267 | ERROR | Ошибка: 'LoginCommand' object has no attribute 'process_gender_step'
+2025-02-23 14:43:15,302 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:43:18,457 | INFO | Message is received: /settings
+2025-02-23 14:43:18,457 | INFO | changed state to "settings"
+2025-02-23 14:43:21,188 | INFO | state "settings" is updated
+2025-02-23 14:43:23,544 | ERROR | Ошибка: 'NoneType' object has no attribute 'send_text_file'
+2025-02-23 14:44:10,221 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:44:12,565 | INFO | Message is received: /settings
+2025-02-23 14:44:12,565 | INFO | changed state to "settings"
+2025-02-23 14:44:13,047 | INFO | state "settings" is updated
+2025-02-23 14:44:34,444 | ERROR | Ошибка: 'LoginCommand' object has no attribute 'process_gender_step'
+2025-02-23 14:46:36,509 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:46:39,575 | INFO | Message is received: /settings
+2025-02-23 14:46:39,575 | INFO | changed state to "settings"
+2025-02-23 14:46:40,187 | INFO | state "settings" is updated
+2025-02-23 14:46:55,122 | ERROR | Infinity polling exception: 'Bot' object has no attribute 'reply_to'
+2025-02-23 14:46:55,126 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\commands\login.py", line 99, in process_gender_step
+    self.bot.send_message(chat_id, "Отлично! Теперь выберите ваши интересы из списка:")
+    ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Bot' object has no attribute 'send_message'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 logger_level=logger_level, allowed_updates=allowed_updates, restart_on_change=False,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            logger_level=logger_level, allowed_updates=allowed_updates)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\commands\login.py", line 111, in process_gender_step
+    self.bot.reply_to(message, 'Произошла ошибка. Пожалуйста, попробуйте снова.')
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'Bot' object has no attribute 'reply_to'
+
+2025-02-23 14:48:32,125 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:48:32,618 | INFO | Message is received: /settings
+2025-02-23 14:48:32,618 | INFO | changed state to "settings"
+2025-02-23 14:48:33,160 | INFO | state "settings" is updated
+2025-02-23 14:48:52,835 | ERROR | Ошибка: 'Bot' object has no attribute 'send_message'
+2025-02-23 14:49:35,971 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:49:37,289 | INFO | Message is received: /settings
+2025-02-23 14:49:37,289 | INFO | changed state to "settings"
+2025-02-23 14:49:37,650 | INFO | state "settings" is updated
+2025-02-23 14:52:31,347 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:52:31,892 | INFO | Message is received: /settings
+2025-02-23 14:52:31,892 | INFO | changed state to "settings"
+2025-02-23 14:52:32,434 | INFO | state "settings" is updated
+2025-02-23 14:52:38,064 | ERROR | Ошибка: invalid literal for int() with base 10: 'ssd'
+2025-02-23 14:55:48,101 | INFO | bot @YouMeetsBot is started!
+2025-02-23 14:55:50,513 | INFO | Message is received: /settings
+2025-02-23 14:55:50,513 | INFO | changed state to "settings"
+2025-02-23 14:55:50,941 | INFO | state "settings" is updated
+2025-02-23 14:56:37,612 | INFO | Message is received: /go
+2025-02-23 14:56:37,613 | INFO | changed state to "go"
+2025-02-23 14:56:37,763 | INFO | state "go" is updated
+2025-02-23 15:28:42,232 | INFO | bot @YouMeetsBot is started!
+2025-02-23 15:28:42,464 | INFO | Message is received: /go
+2025-02-23 15:28:42,465 | INFO | changed state to "go"
+2025-02-23 15:28:42,717 | INFO | state "go" is updated
+2025-02-23 15:29:23,276 | INFO | bot @YouMeetsBot is started!
+2025-02-23 15:29:26,137 | INFO | Message is received: /go
+2025-02-23 15:29:26,138 | INFO | changed state to "go"
+2025-02-23 15:29:26,888 | INFO | state "go" is updated
+2025-02-23 15:30:25,808 | INFO | bot @YouMeetsBot is started!
+2025-02-23 15:30:28,553 | INFO | Message is received: /go
+2025-02-23 15:30:28,553 | INFO | changed state to "go"
+2025-02-23 15:30:28,822 | INFO | state "go" is updated
+2025-02-23 15:31:37,101 | INFO | bot @YouMeetsBot is started!
+2025-02-23 15:31:38,354 | INFO | Message is received: /go
+2025-02-23 15:31:38,355 | INFO | changed state to "go"
+2025-02-23 15:31:38,622 | INFO | state "go" is updated
+2025-02-23 15:34:47,489 | INFO | bot @YouMeetsBot is started!
+2025-02-23 15:34:49,269 | INFO | Message is received: /go
+2025-02-23 15:34:49,269 | INFO | changed state to "go"
+2025-02-23 15:34:49,839 | INFO | state "go" is updated
+2025-02-23 15:35:03,547 | ERROR | Ошибка в search_people: 'Database' object has no attribute 'users'
+2025-02-23 15:38:55,426 | INFO | bot @YouMeetsBot is started!
+2025-02-23 15:38:59,076 | INFO | Message is received: /go
+2025-02-23 15:38:59,076 | INFO | changed state to "go"
+2025-02-23 15:38:59,822 | INFO | state "go" is updated
+2025-02-23 15:47:57,502 | INFO | bot @YouMeetsBot is started!
+2025-02-23 15:48:03,470 | INFO | Message is received: /go
+2025-02-23 15:48:03,470 | INFO | changed state to "go"
+2025-02-23 15:48:04,103 | INFO | state "go" is updated
+2025-02-23 15:48:11,313 | ERROR | Ошибка в search_people: Cannot choose from an empty sequence
+2025-02-23 15:49:18,965 | ERROR | Ошибка в search_people: Cannot choose from an empty sequence
+2025-02-23 15:49:25,302 | ERROR | Ошибка в search_people: Cannot choose from an empty sequence
+2025-02-23 15:53:09,067 | INFO | bot @YouMeetsBot is started!
+2025-02-23 15:53:12,588 | INFO | Message is received: /go
+2025-02-23 15:53:12,588 | INFO | changed state to "go"
+2025-02-23 15:53:12,897 | INFO | state "go" is updated
+2025-02-23 15:55:05,609 | INFO | Message is received: /settings
+2025-02-23 15:55:05,609 | INFO | changed state to "settings"
+2025-02-23 15:55:05,862 | INFO | state "settings" is updated
+2025-02-23 15:56:24,871 | INFO | Message is received: /go
+2025-02-23 15:56:24,872 | INFO | changed state to "go"
+2025-02-23 15:56:24,984 | INFO | state "go" is updated
+2025-02-23 16:02:55,095 | INFO | bot @YouMeetsBot is started!
+2025-02-23 16:02:57,273 | INFO | Message is received: /go
+2025-02-23 16:02:57,273 | INFO | changed state to "go"
+2025-02-23 16:03:00,877 | INFO | state "go" is updated
+2025-02-23 16:03:02,431 | INFO | Message is received: /login
+2025-02-23 16:03:02,431 | INFO | changed state to "login"
+2025-02-23 16:03:03,466 | INFO | state "login" is updated
+2025-02-23 16:03:35,434 | INFO | Message is received: /go
+2025-02-23 16:03:35,435 | INFO | changed state to "go"
+2025-02-23 16:03:35,439 | ERROR | Infinity polling exception: Bot.send_text_file() got an unexpected keyword argument 'reply_markup'
+2025-02-23 16:03:35,442 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 logger_level=logger_level, allowed_updates=allowed_updates, restart_on_change=False,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            logger_level=logger_level, allowed_updates=allowed_updates)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\commands\Command.py", line 34, in command
+    self.bot.set_and_update_state(self.name, message)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\classes\Bot.py", line 40, in set_and_update_state
+    self.update_state(message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\classes\Bot.py", line 35, in update_state
+    callback(message)
+    ~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\commands\go.py", line 17, in execute_command
+    self.bot.send_text_file(message, 'messages/exists.md', reply_markup=InterestsKeyboardFactory.get('interests'))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Bot.send_text_file() got an unexpected keyword argument 'reply_markup'
+
+2025-02-23 16:04:58,321 | INFO | bot @YouMeetsBot is started!
+2025-02-23 16:05:00,433 | INFO | Message is received: /go
+2025-02-23 16:05:00,433 | INFO | changed state to "go"
+2025-02-23 16:05:00,704 | ERROR | Infinity polling exception: 'Bot' object has no attribute 'send_message'
+2025-02-23 16:05:00,706 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 logger_level=logger_level, allowed_updates=allowed_updates, restart_on_change=False,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            logger_level=logger_level, allowed_updates=allowed_updates)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\commands\Command.py", line 34, in command
+    self.bot.set_and_update_state(self.name, message)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\classes\Bot.py", line 40, in set_and_update_state
+    self.update_state(message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\classes\Bot.py", line 35, in update_state
+    callback(message)
+    ~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\commands\go.py", line 18, in execute_command
+    self.bot.send_message(chat_id, '', reply_markup=InterestsKeyboardFactory.get('interests'))
+    ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Bot' object has no attribute 'send_message'
+
+2025-02-23 16:05:21,110 | INFO | bot @YouMeetsBot is started!
+2025-02-23 16:05:23,218 | INFO | Message is received: /go
+2025-02-23 16:05:23,218 | INFO | changed state to "go"
+2025-02-23 16:05:23,591 | ERROR | Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2025-02-23 16:05:23,593 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\commands\Command.py", line 34, in command
+    self.bot.set_and_update_state(self.name, message)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\classes\Bot.py", line 40, in set_and_update_state
+    self.update_state(message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\classes\Bot.py", line 35, in update_state
+    callback(message)
+    ~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main (2)\Meets_Bot-main\commands\go.py", line 18, in execute_command
+    self.bot.telebot.send_message(chat_id, '', reply_markup=InterestsKeyboardFactory.get('interests'))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "C:\Users\djoker77\AppData\Local\Programs\Python\Python313\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+
+2025-02-23 16:06:09,902 | INFO | bot @YouMeetsBot is started!
+2025-02-23 16:06:11,258 | INFO | Message is received: /go
+2025-02-23 16:06:11,258 | INFO | changed state to "go"
+2025-02-23 16:06:12,163 | INFO | state "go" is updated
+2025-02-23 16:06:19,309 | ERROR | Ошибка в handle_yes_no_response: Bot.send_text_file() got an unexpected keyword argument 'reply_markup'
+2025-02-23 16:07:21,784 | INFO | bot @YouMeetsBot is started!
+2025-02-23 16:07:23,647 | INFO | Message is received: /go
+2025-02-23 16:07:23,648 | INFO | changed state to "go"
+2025-02-23 16:07:24,386 | INFO | state "go" is updated
+2025-02-23 16:11:00,135 | INFO | bot @YouMeetsBot is started!
+2025-02-23 16:11:07,017 | INFO | Message is received: /go
+2025-02-23 16:11:07,017 | INFO | changed state to "go"
+2025-02-23 16:11:07,636 | INFO | state "go" is updated
