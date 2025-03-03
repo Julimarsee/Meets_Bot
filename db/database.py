@@ -1,5 +1,6 @@
 from os import getenv
 from pymongo import MongoClient
+import random
 
 import logging
 
@@ -11,7 +12,8 @@ class Database:
         self.client = MongoClient(getenv('mongo_url'))
         self.db = self.client[getenv('db_name')]
         self.interests = self.load_interests()
-
+        self.users = self.db['users']
+    
     def load_interests(self) -> list[str]:
         return parse_json_file(INTERESTS_JSON, [])
 
@@ -114,3 +116,11 @@ class Database:
         except Exception as e:
             logging.error(f"Ошибка при проверке пользователя: {e}")
             return False
+        
+    def search_users_by_interest(self, interest: str):
+        try:
+            users = list(self.users.find({'interests': interest}))
+            return users
+        except Exception as e:
+            logging.error(f"Ошибка при поиске пользователей: {e}")
+            return []

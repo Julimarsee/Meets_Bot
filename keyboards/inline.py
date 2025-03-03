@@ -2,7 +2,7 @@ from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 
 class InlineKeyboardFactory:
     keyboards = {
-        
+
     }
 
     @staticmethod

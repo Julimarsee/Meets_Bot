@@ -1,6 +1,0 @@
-from keyboards.inline import InlineKeyboardFactory
-from keyboards.reply import ReplyKeyboardFactory
-from keyboards.interests import InterestsKeyboardFactory
-from keyboards.gender import GenderKeyboardFactory
-from keyboards.choose import ChooseKeyboardFactory
-from keyboards.yes import YesKeyboardFactory
