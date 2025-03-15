@@ -1,0 +1,447 @@
+2025-03-09 18:47:54,027 | WARNING | Файла json/interests.json не существует
+2025-03-09 18:47:54,028 | WARNING | Файла json/admins.json не существует
+2025-03-09 18:47:55,181 | INFO | bot @YouMeetsBot is started!
+2025-03-09 18:48:26,116 | INFO | Message is received: /go
+2025-03-09 18:48:26,117 | INFO | changed state to "go"
+2025-03-09 18:48:26,154 | WARNING | Файла messages/exists.md не существует
+2025-03-09 18:48:26,886 | ERROR | Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2025-03-09 18:48:26,888 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\commands\Command.py", line 34, in command
+    self.bot.set_and_update_state(self.name, message)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 40, in set_and_update_state
+    self.update_state(message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 35, in update_state
+    callback(message)
+    ~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\commands\go.py", line 23, in execute_command
+    self.bot.send_text_file(message, 'messages/exists.md')
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 66, in send_text_file
+    return self.telebot.send_message(message.chat.id, read_text_file(path), parse_mode='Markdown')
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+
+2025-03-09 18:48:42,275 | WARNING | Файла json/interests.json не существует
+2025-03-09 18:48:42,276 | WARNING | Файла json/admins.json не существует
+2025-03-09 18:48:42,722 | INFO | bot @YouMeetsBot is started!
+2025-03-09 18:49:06,615 | INFO | bot @YouMeetsBot is started!
+2025-03-09 18:49:09,181 | INFO | Message is received: /go
+2025-03-09 18:49:09,181 | INFO | changed state to "go"
+2025-03-09 18:49:09,183 | WARNING | Файла messages/exists.md не существует
+2025-03-09 18:49:09,419 | ERROR | Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2025-03-09 18:49:09,421 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\commands\Command.py", line 34, in command
+    self.bot.set_and_update_state(self.name, message)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 40, in set_and_update_state
+    self.update_state(message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 35, in update_state
+    callback(message)
+    ~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\commands\go.py", line 23, in execute_command
+    self.bot.send_text_file(message, 'messages/exists.md')
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 66, in send_text_file
+    return self.telebot.send_message(message.chat.id, read_text_file(path), parse_mode='Markdown')
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+
+2025-03-09 18:59:01,413 | INFO | bot @YouMeetsBot is started!
+2025-03-09 18:59:07,970 | INFO | Message is received: /login
+2025-03-09 18:59:07,971 | INFO | changed state to "login"
+2025-03-09 18:59:08,267 | INFO | state "login" is updated
+2025-03-09 18:59:14,102 | INFO | Message is received: /go
+2025-03-09 18:59:14,102 | INFO | changed state to "go"
+2025-03-09 18:59:14,104 | WARNING | Файла messages/exists.md не существует
+2025-03-09 18:59:14,880 | ERROR | Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2025-03-09 18:59:14,883 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\commands\Command.py", line 34, in command
+    self.bot.set_and_update_state(self.name, message)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 40, in set_and_update_state
+    self.update_state(message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 35, in update_state
+    callback(message)
+    ~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\commands\go.py", line 23, in execute_command
+    self.bot.send_text_file(message, 'messages/exists.md')
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 66, in send_text_file
+    return self.telebot.send_message(message.chat.id, read_text_file(path), parse_mode='Markdown')
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+
+2025-03-09 19:01:57,389 | INFO | bot @YouMeetsBot is started!
+2025-03-09 19:02:02,260 | INFO | Message is received: /go
+2025-03-09 19:02:02,260 | INFO | changed state to "go"
+2025-03-09 19:02:02,776 | INFO | state "go" is updated
+2025-03-09 19:18:56,955 | INFO | bot @YouMeetsBot is started!
+2025-03-09 19:18:59,658 | INFO | Message is received: /go
+2025-03-09 19:18:59,658 | INFO | changed state to "go"
+2025-03-09 19:19:00,190 | INFO | state "go" is updated
+2025-03-09 19:23:11,357 | INFO | bot @YouMeetsBot is started!
+2025-03-09 19:23:15,636 | INFO | Message is received: /go
+2025-03-09 19:23:15,636 | INFO | changed state to "go"
+2025-03-09 19:23:15,646 | ERROR | Infinity polling exception: 'Message' object has no attribute 'lower'
+2025-03-09 19:23:15,649 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 logger_level=logger_level, allowed_updates=allowed_updates, restart_on_change=False,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            logger_level=logger_level, allowed_updates=allowed_updates)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\commands\Command.py", line 34, in command
+    self.bot.set_and_update_state(self.name, message)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 40, in set_and_update_state
+    self.update_state(message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 35, in update_state
+    callback(message)
+    ~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\commands\go.py", line 22, in execute_command
+    if message.lower() == "закончить ввод":
+       ^^^^^^^^^^^^^
+AttributeError: 'Message' object has no attribute 'lower'
+
+2025-03-09 19:23:57,177 | INFO | bot @YouMeetsBot is started!
+2025-03-09 19:24:00,767 | INFO | Message is received: /go
+2025-03-09 19:24:00,767 | INFO | changed state to "go"
+2025-03-09 19:24:01,508 | INFO | state "go" is updated
+2025-03-09 19:27:41,637 | INFO | bot @YouMeetsBot is started!
+2025-03-09 19:27:43,608 | INFO | Message is received: /go
+2025-03-09 19:27:43,608 | INFO | changed state to "go"
+2025-03-09 19:27:45,064 | INFO | state "go" is updated
+2025-03-09 19:29:10,035 | INFO | bot @YouMeetsBot is started!
+2025-03-09 19:29:12,060 | INFO | Message is received: /go
+2025-03-09 19:29:12,060 | INFO | changed state to "go"
+2025-03-09 19:29:12,542 | INFO | state "go" is updated
+2025-03-09 19:31:11,436 | INFO | bot @YouMeetsBot is started!
+2025-03-09 19:31:12,113 | INFO | Message is received: /go
+2025-03-09 19:31:12,113 | INFO | changed state to "go"
+2025-03-09 19:31:12,584 | INFO | state "go" is updated
+2025-03-09 19:32:59,940 | INFO | bot @YouMeetsBot is started!
+2025-03-09 19:33:02,088 | INFO | Message is received: /go
+2025-03-09 19:33:02,088 | INFO | changed state to "go"
+2025-03-09 19:33:03,060 | INFO | state "go" is updated
+2025-03-09 19:33:04,942 | ERROR | Ошибка в search_people: GoCommand.handle_yes_no_response() missing 1 required positional argument: 'message'
+2025-03-09 19:34:51,012 | INFO | bot @YouMeetsBot is started!
+2025-03-09 19:34:53,428 | INFO | Message is received: /go
+2025-03-09 19:34:53,428 | INFO | changed state to "go"
+2025-03-09 19:34:54,179 | INFO | state "go" is updated
+2025-03-09 19:36:05,568 | INFO | bot @YouMeetsBot is started!
+2025-03-09 19:36:07,713 | INFO | Message is received: /go
+2025-03-09 19:36:07,713 | INFO | changed state to "go"
+2025-03-09 19:36:08,049 | INFO | state "go" is updated
+2025-03-12 21:04:52,282 | INFO | bot @YouMeetsBot is started!
+2025-03-12 21:08:20,331 | INFO | bot @YouMeetsBot is started!
+2025-03-12 21:08:22,610 | INFO | Message is received: /invite
+2025-03-12 21:08:22,611 | INFO | changed state to "invite"
+2025-03-12 21:08:22,881 | INFO | state "invite" is updated
+2025-03-12 21:09:02,441 | ERROR | Ошибка: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse reply keyboard markup JSON object
+2025-03-12 21:09:07,336 | ERROR | Ошибка: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse reply keyboard markup JSON object
+2025-03-12 21:10:43,783 | ERROR | Ошибка: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse reply keyboard markup JSON object
+2025-03-12 21:10:46,828 | ERROR | Ошибка: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse reply keyboard markup JSON object
+2025-03-12 21:15:17,726 | INFO | bot @YouMeetsBot is started!
+2025-03-12 21:15:20,757 | INFO | Message is received: /invite
+2025-03-12 21:15:20,757 | INFO | changed state to "invite"
+2025-03-12 21:15:21,011 | INFO | state "invite" is updated
+2025-03-13 18:31:13,263 | INFO | bot @YouMeetsBot is started!
+2025-03-13 18:31:22,079 | INFO | Message is received: /invite
+2025-03-13 18:31:22,079 | INFO | changed state to "invite"
+2025-03-13 18:31:22,340 | INFO | state "invite" is updated
+2025-03-13 18:35:14,852 | INFO | bot @YouMeetsBot is started!
+2025-03-13 18:35:18,023 | INFO | Message is received: /invite
+2025-03-13 18:35:18,024 | INFO | changed state to "invite"
+2025-03-13 18:35:18,280 | INFO | state "invite" is updated
+2025-03-13 18:41:52,243 | INFO | Message is received: /invite
+2025-03-13 18:41:52,244 | INFO | changed state to "invite"
+2025-03-13 18:41:52,403 | INFO | state "invite" is updated
+2025-03-13 19:04:09,840 | INFO | bot @YouMeetsBot is started!
+2025-03-13 19:04:14,592 | INFO | Message is received: /invite
+2025-03-13 19:04:14,593 | INFO | changed state to "invite"
+2025-03-13 19:04:14,880 | INFO | state "invite" is updated
+2025-03-13 19:05:49,071 | ERROR | Ошибка: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+2025-03-13 19:13:18,463 | INFO | bot @YouMeetsBot is started!
+2025-03-13 19:13:21,857 | INFO | Message is received: /invite
+2025-03-13 19:13:21,857 | INFO | changed state to "invite"
+2025-03-13 19:13:22,625 | INFO | state "invite" is updated
+2025-03-13 19:27:00,277 | INFO | bot @YouMeetsBot is started!
+2025-03-13 19:27:05,511 | INFO | Message is received: /invite
+2025-03-13 19:27:05,511 | INFO | changed state to "invite"
+2025-03-13 19:27:05,758 | INFO | state "invite" is updated
+2025-03-13 19:27:46,259 | ERROR | Ошибка: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+2025-03-15 11:12:01,203 | INFO | bot @YouMeetsBot is started!
+2025-03-15 11:12:04,120 | INFO | Message is received: /invite
+2025-03-15 11:12:04,121 | INFO | changed state to "invite"
+2025-03-15 11:12:04,407 | INFO | state "invite" is updated
+2025-03-15 12:00:07,977 | INFO | bot @YouMeetsBot is started!
+2025-03-15 12:00:11,086 | INFO | Message is received: /invite
+2025-03-15 12:00:11,087 | INFO | changed state to "invite"
+2025-03-15 12:00:11,328 | INFO | state "invite" is updated
+2025-03-15 12:00:28,076 | ERROR | Ошибка: 'Database' object has no attribute 'get_user_name_by_id'
+2025-03-15 12:01:03,049 | INFO | bot @YouMeetsBot is started!
+2025-03-15 12:01:05,832 | INFO | Message is received: /invite
+2025-03-15 12:01:05,832 | INFO | changed state to "invite"
+2025-03-15 12:01:06,232 | INFO | state "invite" is updated
+2025-03-15 12:05:25,981 | INFO | bot @YouMeetsBot is started!
+2025-03-15 12:05:27,682 | INFO | Message is received: /invite
+2025-03-15 12:05:27,682 | INFO | changed state to "invite"
+2025-03-15 12:05:28,464 | INFO | state "invite" is updated
+2025-03-15 12:16:24,636 | INFO | bot @YouMeetsBot is started!
+2025-03-15 12:16:27,324 | INFO | Message is received: /invite
+2025-03-15 12:16:27,324 | INFO | changed state to "invite"
+2025-03-15 12:16:28,081 | INFO | state "invite" is updated
+2025-03-15 12:23:54,945 | INFO | bot @YouMeetsBot is started!
+2025-03-15 12:24:04,503 | INFO | Message is received: /login
+2025-03-15 12:24:04,503 | INFO | changed state to "login"
+2025-03-15 12:24:04,765 | INFO | state "login" is updated
+2025-03-15 12:24:07,149 | INFO | Message is received: /settings
+2025-03-15 12:24:07,149 | INFO | changed state to "settings"
+2025-03-15 12:24:07,150 | WARNING | Файла messages/settings.md не существует
+2025-03-15 12:24:07,261 | ERROR | Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2025-03-15 12:24:07,264 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\commands\Command.py", line 34, in command
+    self.bot.set_and_update_state(self.name, message)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 40, in set_and_update_state
+    self.update_state(message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 35, in update_state
+    callback(message)
+    ~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\commands\settings.py", line 17, in execute_command
+    self.bot.send_text_file(message, 'messages/settings.md')
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 66, in send_text_file
+    return self.telebot.send_message(message.chat.id, read_text_file(path), parse_mode='Markdown')
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+
+2025-03-15 16:29:22,462 | INFO | bot @YouMeetsBot is started!
+2025-03-15 16:29:25,953 | INFO | Message is received: /settings
+2025-03-15 16:29:25,954 | INFO | changed state to "settings"
+2025-03-15 16:29:25,954 | WARNING | Файла messages/settings.md не существует
+2025-03-15 16:29:26,183 | ERROR | Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2025-03-15 16:29:26,186 | ERROR | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 9233, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\commands\Command.py", line 34, in command
+    self.bot.set_and_update_state(self.name, message)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 40, in set_and_update_state
+    self.update_state(message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 35, in update_state
+    callback(message)
+    ~~~~~~~~^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\commands\settings.py", line 17, in execute_command
+    self.bot.send_text_file(message, 'messages/settings.md')
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\djoker77\Desktop\Meets_Bot-main\Meets_Bot-main\classes\Bot.py", line 66, in send_text_file
+    return self.telebot.send_message(message.chat.id, read_text_file(path), parse_mode='Markdown')
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\__init__.py", line 1800, in send_message
+    apihelper.send_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, chat_id, text,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_parameters=reply_parameters, link_preview_options=link_preview_options, business_connection_id=business_connection_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message_effect_id=message_effect_id, allow_paid_broadcast=allow_paid_broadcast))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 275, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "C:\Users\djoker77\Desktop\Meets_Bot-main\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+
+2025-03-15 16:31:54,833 | INFO | bot @YouMeetsBot is started!
+2025-03-15 16:31:59,575 | INFO | Message is received: /settings
+2025-03-15 16:31:59,575 | INFO | changed state to "settings"
+2025-03-15 16:32:00,022 | INFO | state "settings" is updated
+2025-03-15 16:32:07,591 | WARNING | Файла messages/login.md не существует
+2025-03-15 16:32:07,763 | ERROR | Ошибка: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2025-03-15 16:32:44,300 | INFO | bot @YouMeetsBot is started!
+2025-03-15 16:32:46,850 | INFO | Message is received: /settings
+2025-03-15 16:32:46,851 | INFO | changed state to "settings"
+2025-03-15 16:32:48,330 | INFO | state "settings" is updated
+2025-03-15 16:32:54,759 | ERROR | Ошибка: Database.save_user_name() missing 1 required positional argument: 'username'
+2025-03-15 18:21:32,092 | INFO | bot @YouMeetsBot is started!
+2025-03-15 18:21:41,577 | INFO | Message is received: /settings
+2025-03-15 18:21:41,577 | INFO | changed state to "settings"
+2025-03-15 18:21:41,933 | INFO | state "settings" is updated
+2025-03-15 18:23:06,967 | INFO | Message is received: /invite
+2025-03-15 18:23:06,968 | INFO | changed state to "invite"
+2025-03-15 18:23:07,087 | INFO | state "invite" is updated
+2025-03-15 18:29:39,379 | INFO | bot @YouMeetsBot is started!
+2025-03-15 18:29:44,070 | INFO | Message is received: /invite
+2025-03-15 18:29:44,070 | INFO | changed state to "invite"
+2025-03-15 18:29:44,613 | INFO | state "invite" is updated
+2025-03-15 18:51:11,910 | INFO | bot @YouMeetsBot is started!
+2025-03-15 18:51:16,300 | INFO | Message is received: /invite
+2025-03-15 18:51:16,300 | INFO | changed state to "invite"
+2025-03-15 18:51:17,015 | INFO | state "invite" is updated
+2025-03-15 18:54:01,880 | INFO | bot @YouMeetsBot is started!
+2025-03-15 18:54:05,475 | INFO | Message is received: /invite
+2025-03-15 18:54:05,475 | INFO | changed state to "invite"
+2025-03-15 18:54:06,274 | INFO | state "invite" is updated
+2025-03-15 18:57:27,386 | INFO | bot @YouMeetsBot is started!
+2025-03-15 18:57:30,717 | INFO | Message is received: /invite
+2025-03-15 18:57:30,718 | INFO | changed state to "invite"
+2025-03-15 18:57:30,992 | INFO | state "invite" is updated
+2025-03-15 18:58:49,610 | INFO | bot @YouMeetsBot is started!
+2025-03-15 18:58:50,885 | INFO | Message is received: /invite
+2025-03-15 18:58:50,886 | INFO | changed state to "invite"
+2025-03-15 18:58:51,551 | INFO | state "invite" is updated
+2025-03-15 19:09:44,525 | INFO | bot @YouMeetsBot is started!
+2025-03-15 19:09:51,145 | INFO | Message is received: /invite
+2025-03-15 19:09:51,146 | INFO | changed state to "invite"
+2025-03-15 19:09:51,475 | INFO | state "invite" is updated
+2025-03-15 19:10:12,291 | INFO | Processing callback data: action=accept, username=Sherivv
+2025-03-15 19:10:12,292 | INFO | Sending acceptance to receiver_chat_id=1965844239
+2025-03-15 19:10:23,402 | INFO | Processing callback data: action=decline, username=Sherivv
+2025-03-15 19:10:23,403 | INFO | Sending decline to receiver_chat_id=1965844239
